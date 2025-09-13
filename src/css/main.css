@@ -118,6 +118,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -128,6 +129,7 @@ body {
   background-color: var(--bg-primary);
   overflow-x: hidden;
   transition: all var(--transition-normal);
+  overflow-x: hidden;
 }
 
 ul,
