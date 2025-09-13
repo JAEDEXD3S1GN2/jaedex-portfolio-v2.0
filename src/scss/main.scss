@@ -1,0 +1,17 @@
+// Import all SCSS files
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/notifications';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/home';
+@import 'themes/dark';
+@import 'utilities/animations';
+@import 'utilities/helpers';

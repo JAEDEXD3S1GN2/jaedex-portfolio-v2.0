@@ -1,0 +1,307 @@
+// Home Page Styles
+.section {
+  padding: var(--space-20) 0;
+
+  @include media-down(md) {
+    padding: var(--space-16) 0;
+  }
+
+  @include media-down(sm) {
+    padding: var(--space-12) 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+
+  @include media-down(md) {
+    padding: 0 var(--space-4);
+  }
+}
+
+// Section headers
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+
+  @include media-down(md) {
+    margin-bottom: var(--space-12);
+  }
+
+  .section-title {
+    font-size: var(--fs-4xl);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-4);
+    @include text-gradient(var(--gradient-primary));
+
+    @include media-down(md) {
+      font-size: var(--fs-3xl);
+    }
+  }
+
+  .section-subtitle {
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// About section
+.about {
+  background: var(--gray-50);
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+
+    @include media-down(lg) {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+  }
+
+  .about-text {
+    .about-description {
+      font-size: var(--fs-lg);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-6);
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin: var(--space-8) 0;
+
+      @include media-down(sm) {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+      }
+
+      .stat-item {
+        text-align: center;
+
+        .stat-number {
+          display: block;
+          font-size: var(--fs-4xl);
+          font-weight: var(--fw-bold);
+          @include text-gradient(var(--gradient-primary));
+          margin-bottom: var(--space-2);
+        }
+
+        .stat-label {
+          color: var(--text-secondary);
+          font-size: var(--fs-sm);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .about-image {
+    .image-wrapper {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: var(--radius-2xl);
+        box-shadow: 0 20px 40px var(--shadow-medium);
+      }
+
+      .image-decoration {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 100px;
+        height: 100px;
+        background: var(--gradient-secondary);
+        border-radius: var(--radius-2xl);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// Skills section
+.skills {
+  .skills-grid {
+    @include grid-columns(4, var(--space-8));
+
+    @include media-down(lg) {
+      @include grid-columns(3, var(--space-6));
+    }
+
+    @include media-down(md) {
+      @include grid-columns(2, var(--space-6));
+    }
+
+    @include media-down(sm) {
+      @include grid-columns(1, var(--space-6));
+    }
+  }
+}
+
+// Experience section
+.experience {
+  background: var(--gray-50);
+
+  .experience-content {
+    .experience-cards {
+      @include grid-columns(3, var(--space-8));
+
+      @include media-down(lg) {
+        @include grid-columns(2, var(--space-6));
+      }
+
+      @include media-down(md) {
+        @include grid-columns(1, var(--space-6));
+      }
+    }
+  }
+}
+
+// Projects section
+.projects {
+  .projects-grid {
+    @include grid-columns(3, var(--space-8));
+    margin-bottom: var(--space-12);
+
+    @include media-down(lg) {
+      @include grid-columns(2, var(--space-6));
+    }
+
+    @include media-down(md) {
+      @include grid-columns(1, var(--space-6));
+    }
+  }
+
+  .projects-cta {
+    text-align: center;
+
+    p {
+      font-size: var(--fs-lg);
+      margin-bottom: var(--space-4);
+      color: var(--text-secondary);
+    }
+  }
+}
+
+// Services section
+.services {
+  background: var(--gray-50);
+
+  .services-grid {
+    @include grid-columns(3, var(--space-8));
+
+    @include media-down(lg) {
+      @include grid-columns(2, var(--space-6));
+    }
+
+    @include media-down(md) {
+      @include grid-columns(1, var(--space-6));
+    }
+  }
+}
+
+// Testimonials section
+.testimonials {
+  .testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto var(--space-8);
+    position: relative;
+    height: 300px;
+
+    .testimonial-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .testimonial-nav {
+    @include flex-center;
+    gap: var(--space-3);
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: var(--radius-full);
+      background: var(--gray-300);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+
+      &.active {
+        background: var(--primary-color);
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// Contact section
+.contact {
+  background: var(--gray-50);
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+
+    @include media-down(lg) {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+  }
+
+  .contact-info {
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+
+      .contact-icon {
+        @include flex-center;
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-primary);
+        border-radius: var(--radius-2xl);
+        color: var(--white);
+
+        i {
+          font-size: var(--fs-xl);
+        }
+      }
+
+      .contact-details {
+        h4 {
+          font-size: var(--fs-lg);
+          margin-bottom: var(--space-1);
+          color: var(--text-primary);
+        }
+
+        p {
+          color: var(--text-secondary);
+          margin: 0;
+        }
+      }
+    }
+
+    .contact-social {
+      display: flex;
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+  }
+}

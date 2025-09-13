@@ -1,0 +1,178 @@
+// Form Components
+.form-group {
+  position: relative;
+  margin-bottom: var(--space-6);
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: var(--space-4) var(--space-4) var(--space-3);
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--fs-base);
+    transition: all var(--transition-normal);
+    
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+    
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      transform: translateY(-28px) scale(0.85);
+      color: var(--primary-color);
+      background: var(--bg-primary);
+      padding: 0 var(--space-2);
+    }
+    
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  label {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-4);
+    color: var(--text-light);
+    font-size: var(--fs-base);
+    pointer-events: none;
+    transition: all var(--transition-normal);
+    transform-origin: left top;
+  }
+  
+  // Error state
+  &.error {
+    input,
+    textarea {
+      border-color: var(--error);
+      
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+      }
+    }
+    
+    label {
+      color: var(--error);
+    }
+  }
+  
+  // Success state
+  &.success {
+    input,
+    textarea {
+      border-color: var(--success);
+      
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+      }
+    }
+    
+    label {
+      color: var(--success);
+    }
+  }
+}
+
+// Contact form specific styles
+.contact-form {
+  background: var(--bg-primary);
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 10px 25px var(--shadow-light);
+  
+  @include media-down(md) {
+    padding: var(--space-6);
+  }
+}
+
+// Form validation messages
+.form-message {
+  margin-top: var(--space-2);
+  font-size: var(--fs-sm);
+  
+  &.error {
+    color: var(--error);
+  }
+  
+  &.success {
+    color: var(--success);
+  }
+}
+
+// Checkbox and radio styles
+.form-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-medium);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    position: relative;
+    transition: all var(--transition-normal);
+    
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 10px;
+      border: solid var(--white);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  
+  input:checked ~ .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    
+    &::after {
+      display: block;
+    }
+  }
+  
+  input[type="radio"] ~ .checkmark {
+    border-radius: var(--radius-full);
+    
+    &::after {
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border: none;
+      background: var(--white);
+      border-radius: var(--radius-full);
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+}

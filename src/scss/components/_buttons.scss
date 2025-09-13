@@ -1,0 +1,161 @@
+// Button Components
+.btn {
+  @include button-base;
+  
+  // Primary button
+  &.btn-primary {
+    @include button-variant(
+      var(--gradient-primary),
+      var(--white),
+      var(--primary-dark),
+      var(--white)
+    );
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px var(--shadow-medium);
+    }
+  }
+  
+  // Outline button
+  &.btn-outline {
+    @include button-variant(
+      transparent,
+      var(--primary-color),
+      var(--primary-color),
+      var(--white)
+    );
+    border: 2px solid var(--primary-color);
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px var(--shadow-medium);
+    }
+  }
+  
+  // Secondary button
+  &.btn-secondary {
+    @include button-variant(
+      var(--gradient-secondary),
+      var(--white),
+      var(--secondary-dark),
+      var(--white)
+    );
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px var(--shadow-medium);
+    }
+  }
+  
+  // Ghost button
+  &.btn-ghost {
+    @include button-variant(
+      transparent,
+      var(--text-primary),
+      var(--gray-100),
+      var(--text-primary)
+    );
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-1px);
+    }
+  }
+  
+  // Button sizes
+  &.btn-sm {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-sm);
+  }
+  
+  &.btn-lg {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--fs-lg);
+  }
+  
+  // Button with icon
+  i {
+    transition: transform var(--transition-fast);
+  }
+  
+  &:hover i {
+    transform: translateX(2px);
+  }
+}
+
+// Social buttons
+.social-link {
+  @include flex-center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--shadow-medium);
+  }
+  
+  i {
+    font-size: var(--fs-lg);
+  }
+}
+
+// Back to top button
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-normal);
+  z-index: var(--z-fixed);
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--shadow-medium);
+  }
+  
+  i {
+    font-size: var(--fs-lg);
+  }
+}
+
+// Theme toggle button
+.theme-btn {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: rotate(180deg);
+  }
+  
+  i {
+    font-size: var(--fs-base);
+  }
+}

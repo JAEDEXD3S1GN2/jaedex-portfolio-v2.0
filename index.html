@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oluwaloni James - Modern Portfolio</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/main.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-brand" data-aos="fade-right">
+          <span class="brand-text">Jaedex</span>
+          <span class="brand-accent">Designs</span>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <div class="nav-close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="theme-toggle">
+            <button class="theme-btn" id="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="hero-text">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Oluwaloni James</h1>
+            <div class="hero-title">
+              <span>I'm a </span>
+              <span class="typed-text"></span>
+              <span class="cursor">&nbsp;</span>
+            </div>
+            <p class="hero-description">
+              Passionate full-stack developer with 4+ years of experience
+              creating beautiful, responsive web applications and mobile
+              solutions.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <span>View My Work</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <span>Get In Touch</span>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="hero-social">
+              <a
+                href="https://www.linkedin.com/in/james-oluwaloni-075696228/"
+                class="social-link"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/adeoluwaloni/"
+                class="social-link"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/JamesOluwaloni"
+                class="social-link"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://github.com/JAEDEXD3S1GN2"
+                class="social-link"
+                data-aos="fade-up"
+                data-aos-delay="700"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+          <div class="image-container">
+            <img
+              src="src/assets/portfolio pic.png"
+              alt="Oluwaloni James"
+              class="profile-img"
+            />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know me better</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <p class="about-description">
+              I am a passionate web developer specializing in creating websites
+              that meet specific client needs. With over 4 years of experience,
+              I develop web applications using modern technologies including
+              HTML, CSS, JavaScript, React.js, and more.
+            </p>
+            <p class="about-description">
+              I'm always fascinated by the tech world and hope to contribute
+              greatly to the advancement of people by creating solutions to
+              pressing problems. If you're looking to create modern and visually
+              rich websites, I'm the right person for you.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-count="4">0</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="50">0</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="30">0</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
+
+            <a
+              href="src/assets/Oluwaloni James Resume.pdf"
+              download
+              class="btn btn-primary"
+            >
+              <span>Download CV</span>
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+
+          <div class="about-image" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="src/assets/portfolio pic 2.png" alt="About Me" />
+              <div class="image-decoration"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">My Skills</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+              />
+            </div>
+            <h3 class="skill-name">HTML5</h3>
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+              />
+            </div>
+            <h3 class="skill-name">CSS3/SCSS</h3>
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+              />
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+            </div>
+            <h3 class="skill-name">TypeScript</h3>
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              />
+            </div>
+            <h3 class="skill-name">React.js</h3>
+            <!-- <div class="skill-progress">
+              <div class="progress-bar" data-width="88%"></div>
+            </div> -->
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+              />
+            </div>
+            <h3 class="skill-name">Next.js</h3>
+            <!-- <div class="skill-progress">
+              <div class="progress-bar" data-width="82%"></div>
+            </div> -->
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+            </div>
+            <h3 class="skill-name">Node.js</h3>
+            <!-- <div class="skill-progress">
+              <div class="progress-bar" data-width="75%"></div>
+            </div> -->
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="skill-icon">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+              />
+            </div>
+            <h3 class="skill-name">Python</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">My Experience</h2>
+          <p class="section-subtitle">My journey so far</p>
+        </div>
+
+        <div class="experience-content">
+          <div class="experience-cards">
+            <div class="exp-card" data-aos="flip-left" data-aos-delay="100">
+              <div class="card-front">
+                <div class="card-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="card-title">Education</h3>
+                <p class="card-description">
+                  Academic background and certifications
+                </p>
+              </div>
+              <div class="card-back">
+                <div class="card-content">
+                  <div class="timeline-item">
+                    <h4>2017-2023</h4>
+                    <p>MESL Staff Secondary School Life-camp, Jebba-North</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h4>2024</h4>
+                    <p>Diploma from Femtech IT Training Institute</p>
+                    <button class="cert-btn" onclick="showCertificate()">
+                      View Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card" data-aos="flip-left" data-aos-delay="200">
+              <div class="card-front">
+                <div class="card-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="card-title">Experience</h3>
+                <p class="card-description">Professional work experience</p>
+              </div>
+              <div class="card-back">
+                <div class="card-content">
+                  <div class="timeline-item">
+                    <h4>2021-Current</h4>
+                    <p>Studying and learning UI/UX Design</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h4>2024</h4>
+                    <p>Web/App Development Training</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h4>2024</h4>
+                    <p>Built food recipe app and student grading system</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card" data-aos="flip-left" data-aos-delay="300">
+              <div class="card-front">
+                <div class="card-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3 class="card-title">Skills</h3>
+                <p class="card-description">
+                  Technical expertise and focus areas
+                </p>
+              </div>
+              <div class="card-back">
+                <div class="card-content">
+                  <div class="timeline-item">
+                    <h4>UI/UX Design</h4>
+                    <p>Creating intuitive user interfaces</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h4>Web Development</h4>
+                    <p>Full-stack web applications</p>
+                  </div>
+                  <div class="timeline-item">
+                    <h4>Mobile Development</h4>
+                    <p>Cross-platform mobile apps</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle">Some projects I enjoyed working on</p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img
+                src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Land Mark Food Hub"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://lmfh.vercel.app/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Land Mark Food Hub</h3>
+              <p class="project-description">
+                A web application that enables people to order their favorite
+                delicacies with seamless server functionality and responsive
+                design.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img
+                src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Recipe Net"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://recipe-net.vercel.app/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Food Recipe Web App</h3>
+              <p class="project-description">
+                Explore, save, and share delicious recipes with ease. Features
+                search filters and personalized recommendations.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">API</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img
+                src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Student Analytics"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://student-performance-plum.vercel.app/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Student Performance System</h3>
+              <p class="project-description">
+                Track and manage student performance with analytics and
+                streamlined assessment processes.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Charts.js</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-cta" data-aos="fade-up" data-aos-delay="400">
+          <p>Want to see more of my projects?</p>
+          <a href="projects.html" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">My Services</h2>
+          <p class="section-subtitle">What I can do for you</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">
+              Creating visually captivating and user-friendly websites with
+              modern technologies and responsive design.
+            </p>
+            <ul class="service-features">
+              <li>Responsive Design</li>
+              <li>Modern Frameworks</li>
+              <li>Performance Optimization</li>
+              <li>SEO Friendly</li>
+            </ul>
+            <a href="#contact" class="service-btn">Learn More</a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-description">
+              Crafting intuitive user interfaces and experiences that engage
+              users and drive conversions.
+            </p>
+            <ul class="service-features">
+              <li>User Research</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+              <li>Visual Design</li>
+            </ul>
+            <a href="#contact" class="service-btn">Learn More</a>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="service-title">Mobile Development</h3>
+            <p class="service-description">
+              Building high-performance mobile applications for iOS and Android
+              platforms with native feel.
+            </p>
+            <ul class="service-features">
+              <li>Cross-platform</li>
+              <li>Native Performance</li>
+              <li>App Store Optimization</li>
+              <li>Maintenance & Support</li>
+            </ul>
+            <a href="#contact" class="service-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">What Clients Say</h2>
+          <p class="section-subtitle">Feedback from people I've worked with</p>
+        </div>
+
+        <div class="testimonials-slider">
+          <div class="testimonial-card active" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>
+                  "Collaborating with James was an absolute pleasure. He
+                  consistently delivered high-quality work, bringing creative
+                  solutions and a keen eye for detail to our project."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="src/assets/Oga-Tim-Alex.jpg" alt="Tim-Alex" />
+                <div class="author-info">
+                  <h4>Tim-Alex</h4>
+                  <span>Project Manager</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-aos="fade-up">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>
+                  "I enjoyed working with James on a complex recommender system
+                  project. His expertise in software engineering was evident,
+                  and he executed tasks with remarkable precision."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="src/assets/Emmy.jpg" alt="Emmanuel" />
+                <div class="author-info">
+                  <h4>Emmanuel</h4>
+                  <span>Software Engineer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-nav">
+          <button class="nav-dot active" data-slide="0"></button>
+          <button class="nav-dot" data-slide="1"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's work together on your next project
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>oluwalonijames@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+234 (0) 123 456 7890</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Nigeria</p>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a
+                href="https://www.linkedin.com/in/james-oluwaloni-075696228/"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/adeoluwaloni/"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://x.com/JamesOluwaloni" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://github.com" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" data-aos="fade-left">
+            <div class="form-group">
+              <input type="text" name="name" id="name" required />
+              <label for="name">Your Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" id="email" required />
+              <label for="email">Your Email</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" id="subject" required />
+              <label for="subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                required
+              ></textarea>
+              <label for="message">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Jaedex Designs</h3>
+            <p>Creating digital experiences that matter</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#services">Web Development</a></li>
+                <li><a href="#services">UI/UX Design</a></li>
+                <li><a href="#services">Mobile Apps</a></li>
+                <li><a href="#services">Consulting</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/james-oluwaloni-075696228/"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/adeoluwaloni/"
+              class="social-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/JamesOluwaloni" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Oluwaloni James. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img
+          src="src/assets/FemTech cert.jpg"
+          alt="Certificate"
+          class="certificate-img"
+        />
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

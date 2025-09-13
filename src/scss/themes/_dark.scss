@@ -1,0 +1,134 @@
+// Dark Theme
+[data-theme="dark"] {
+  // Background Colors
+  --bg-primary: var(--gray-900);
+  --bg-secondary: var(--gray-800);
+  
+  // Text Colors
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-300);
+  --text-light: var(--gray-400);
+  
+  // Border Colors
+  --border-light: var(--gray-700);
+  --border-medium: var(--gray-600);
+  --border-dark: var(--gray-500);
+  
+  // Component specific overrides
+  .navbar {
+    background: rgba(17, 24, 39, 0.95);
+    border-bottom-color: var(--gray-800);
+    
+    &.scrolled {
+      background: rgba(17, 24, 39, 0.98);
+    }
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+  }
+  
+  .section {
+    &:nth-child(even) {
+      background: var(--gray-800);
+    }
+  }
+  
+  .card {
+    background: var(--gray-800);
+    border: 1px solid var(--gray-700);
+  }
+  
+  .form-group {
+    input,
+    textarea {
+      background: var(--gray-800);
+      border-color: var(--gray-700);
+      color: var(--text-primary);
+      
+      &:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+      }
+    }
+    
+    label {
+      color: var(--text-light);
+      
+      &:focus,
+      &:not(:placeholder-shown) {
+        background: var(--gray-800);
+      }
+    }
+  }
+  
+  .notification {
+    background: var(--gray-800);
+    border-left-color: var(--primary-color);
+    color: var(--text-primary);
+  }
+  
+  .modal-content {
+    background: var(--gray-800);
+  }
+  
+  .social-link {
+    background: var(--gray-800);
+    color: var(--text-secondary);
+    
+    &:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+  
+  .nav-toggle,
+  .nav-close {
+    background: var(--gray-800);
+    color: var(--text-secondary);
+    
+    &:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+  
+  .theme-btn {
+    background: var(--gray-800);
+    color: var(--text-secondary);
+    
+    &:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+  
+  .back-to-top {
+    background: var(--gradient-primary);
+  }
+  
+  .project-overlay {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .testimonial-nav .nav-dot {
+    background: var(--gray-600);
+    
+    &.active {
+      background: var(--primary-color);
+    }
+  }
+  
+  .skill-progress {
+    background: var(--gray-700);
+  }
+  
+  .service-features li::before {
+    color: var(--success);
+  }
+  
+  .tech-tag {
+    background: var(--gray-700);
+    color: var(--text-secondary);
+  }
+}

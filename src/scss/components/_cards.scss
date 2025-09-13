@@ -1,0 +1,375 @@
+// Card Components
+.card {
+  @include card-base;
+  padding: var(--space-6);
+  
+  @include media-down(md) {
+    padding: var(--space-4);
+  }
+}
+
+// Project cards
+.project-card {
+  @include card-base;
+  overflow: hidden;
+  @include card-hover;
+  
+  .project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      @include flex-center;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      
+      .project-links {
+        display: flex;
+        gap: var(--space-4);
+        
+        .project-link {
+          @include flex-center;
+          width: 48px;
+          height: 48px;
+          background: var(--white);
+          color: var(--text-primary);
+          border-radius: var(--radius-full);
+          transition: all var(--transition-normal);
+          
+          &:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: scale(1.1);
+          }
+          
+          i {
+            font-size: var(--fs-lg);
+          }
+        }
+      }
+    }
+    
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      
+      .project-overlay {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .project-content {
+    padding: var(--space-6);
+    
+    .project-title {
+      font-size: var(--fs-xl);
+      margin-bottom: var(--space-3);
+      color: var(--text-primary);
+    }
+    
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+      line-height: var(--lh-relaxed);
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      
+      .tech-tag {
+        padding: var(--space-1) var(--space-3);
+        background: var(--gray-100);
+        color: var(--text-secondary);
+        border-radius: var(--radius-full);
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-medium);
+      }
+    }
+  }
+}
+
+// Service cards
+.service-card {
+  @include card-base;
+  padding: var(--space-8);
+  text-align: center;
+  @include card-hover;
+  
+  .service-icon {
+    @include flex-center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-6);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-2xl);
+    color: var(--white);
+    
+    i {
+      font-size: var(--fs-3xl);
+    }
+  }
+  
+  .service-title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+  
+  .service-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+    line-height: var(--lh-relaxed);
+  }
+  
+  .service-features {
+    margin-bottom: var(--space-6);
+    
+    li {
+      padding: var(--space-2) 0;
+      color: var(--text-secondary);
+      position: relative;
+      
+      &::before {
+        content: "✓";
+        color: var(--success);
+        font-weight: var(--fw-bold);
+        margin-right: var(--space-2);
+      }
+    }
+  }
+  
+  .service-btn {
+    @include button-base;
+    @include button-variant(
+      transparent,
+      var(--primary-color),
+      var(--primary-color),
+      var(--white)
+    );
+    border: 2px solid var(--primary-color);
+    width: 100%;
+  }
+}
+
+// Skill cards
+.skill-card {
+  @include card-base;
+  padding: var(--space-6);
+  text-align: center;
+  @include card-hover;
+  
+  .skill-icon {
+    @include flex-center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-4);
+    
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+  
+  .skill-name {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+  
+  .skill-progress {
+    width: 100%;
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    
+    .progress-bar {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-full);
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+  }
+}
+
+// Experience cards
+.exp-card {
+  perspective: 1000px;
+  height: 400px;
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: var(--radius-2xl);
+    @include flex-center;
+    flex-direction: column;
+    padding: var(--space-6);
+    text-align: center;
+  }
+  
+  .card-front {
+    background: var(--gradient-primary);
+    color: var(--white);
+    
+    .card-icon {
+      font-size: var(--fs-5xl);
+      margin-bottom: var(--space-4);
+    }
+    
+    .card-title {
+      font-size: var(--fs-2xl);
+      margin-bottom: var(--space-3);
+    }
+    
+    .card-description {
+      font-size: var(--fs-base);
+      opacity: 0.9;
+    }
+  }
+  
+  .card-back {
+    background: var(--white);
+    color: var(--text-primary);
+    transform: rotateY(180deg);
+    
+    .card-content {
+      width: 100%;
+      
+      .timeline-item {
+        margin-bottom: var(--space-4);
+        text-align: left;
+        
+        h4 {
+          color: var(--primary-color);
+          font-size: var(--fs-lg);
+          margin-bottom: var(--space-2);
+        }
+        
+        p {
+          color: var(--text-secondary);
+          margin-bottom: var(--space-2);
+        }
+        
+        .cert-btn {
+          @include button-base;
+          @include button-variant(
+            var(--primary-color),
+            var(--white),
+            var(--primary-dark),
+            var(--white)
+          );
+          font-size: var(--fs-sm);
+          padding: var(--space-2) var(--space-4);
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    .card-front {
+      transform: rotateY(-180deg);
+    }
+    
+    .card-back {
+      transform: rotateY(0);
+    }
+  }
+}
+
+// Testimonial cards
+.testimonial-card {
+  @include card-base;
+  padding: var(--space-8);
+  text-align: center;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all var(--transition-slow);
+  
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .testimonial-content {
+    .testimonial-text {
+      margin-bottom: var(--space-6);
+      
+      p {
+        font-size: var(--fs-lg);
+        font-style: italic;
+        color: var(--text-secondary);
+        line-height: var(--lh-relaxed);
+        position: relative;
+        
+        &::before,
+        &::after {
+          content: '"';
+          font-size: var(--fs-4xl);
+          color: var(--primary-color);
+          position: absolute;
+        }
+        
+        &::before {
+          top: -10px;
+          left: -20px;
+        }
+        
+        &::after {
+          bottom: -30px;
+          right: -20px;
+        }
+      }
+    }
+    
+    .testimonial-author {
+      @include flex-center;
+      gap: var(--space-4);
+      
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+      }
+      
+      .author-info {
+        text-align: left;
+        
+        h4 {
+          font-size: var(--fs-lg);
+          color: var(--text-primary);
+          margin-bottom: var(--space-1);
+        }
+        
+        span {
+          color: var(--text-light);
+          font-size: var(--fs-sm);
+        }
+      }
+    }
+  }
+}

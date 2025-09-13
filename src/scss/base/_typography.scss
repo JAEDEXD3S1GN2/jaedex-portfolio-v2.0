@@ -1,0 +1,150 @@
+// Typography Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--fs-5xl);
+  
+  @include media-down(md) {
+    font-size: var(--fs-4xl);
+  }
+  
+  @include media-down(sm) {
+    font-size: var(--fs-3xl);
+  }
+}
+
+h2 {
+  font-size: var(--fs-4xl);
+  
+  @include media-down(md) {
+    font-size: var(--fs-3xl);
+  }
+  
+  @include media-down(sm) {
+    font-size: var(--fs-2xl);
+  }
+}
+
+h3 {
+  font-size: var(--fs-3xl);
+  
+  @include media-down(md) {
+    font-size: var(--fs-2xl);
+  }
+  
+  @include media-down(sm) {
+    font-size: var(--fs-xl);
+  }
+}
+
+h4 {
+  font-size: var(--fs-2xl);
+  
+  @include media-down(md) {
+    font-size: var(--fs-xl);
+  }
+}
+
+h5 {
+  font-size: var(--fs-xl);
+  
+  @include media-down(md) {
+    font-size: var(--fs-lg);
+  }
+}
+
+h6 {
+  font-size: var(--fs-lg);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-gradient {
+  @include text-gradient(var(--gradient-primary));
+}
+
+// Font weight utilities
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-normal {
+  font-weight: var(--fw-normal);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+// Font size utilities
+.fs-sm {
+  font-size: var(--fs-sm);
+}
+
+.fs-base {
+  font-size: var(--fs-base);
+}
+
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+
+.fs-2xl {
+  font-size: var(--fs-2xl);
+}

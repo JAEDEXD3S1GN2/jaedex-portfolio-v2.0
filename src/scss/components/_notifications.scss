@@ -1,0 +1,194 @@
+// Notification Components
+.notification-container {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 400px;
+  
+  @include media-down(sm) {
+    top: var(--space-4);
+    right: var(--space-4);
+    left: var(--space-4);
+    max-width: none;
+  }
+}
+
+.notification {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 10px 25px var(--shadow-medium);
+  border-left: 4px solid var(--primary-color);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInRight 0.3s ease-out forwards;
+  
+  &.success {
+    border-left-color: var(--success);
+    
+    .notification-icon {
+      background: var(--success);
+      
+      &::before {
+        content: "✓";
+      }
+    }
+  }
+  
+  &.error {
+    border-left-color: var(--error);
+    
+    .notification-icon {
+      background: var(--error);
+      
+      &::before {
+        content: "✕";
+      }
+    }
+  }
+  
+  &.warning {
+    border-left-color: var(--warning);
+    
+    .notification-icon {
+      background: var(--warning);
+      
+      &::before {
+        content: "!";
+      }
+    }
+  }
+  
+  &.info {
+    border-left-color: var(--info);
+    
+    .notification-icon {
+      background: var(--info);
+      
+      &::before {
+        content: "i";
+      }
+    }
+  }
+  
+  .notification-icon {
+    @include flex-center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    color: var(--white);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    flex-shrink: 0;
+  }
+  
+  .notification-content {
+    flex: 1;
+    
+    .notification-title {
+      font-size: var(--fs-base);
+      font-weight: var(--fw-semibold);
+      color: var(--text-primary);
+      margin-bottom: var(--space-1);
+    }
+    
+    .notification-message {
+      font-size: var(--fs-sm);
+      color: var(--text-secondary);
+      line-height: var(--lh-normal);
+    }
+  }
+  
+  .notification-close {
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background: var(--gray-100);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    
+    &:hover {
+      background: var(--gray-200);
+      color: var(--text-primary);
+    }
+    
+    &::before {
+      content: "✕";
+      font-size: var(--fs-xs);
+    }
+  }
+  
+  // Auto-hide animation
+  &.hide {
+    animation: slideOutRight 0.3s ease-in forwards;
+  }
+}
+
+// Progress bar for auto-hide
+.notification-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  animation: progressBar 5s linear forwards;
+  
+  .notification.success & {
+    background: var(--success);
+  }
+  
+  .notification.error & {
+    background: var(--error);
+  }
+  
+  .notification.warning & {
+    background: var(--warning);
+  }
+  
+  .notification.info & {
+    background: var(--info);
+  }
+}
+
+// Animations
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
