@@ -1381,7 +1381,8 @@ p {
   .navbar .nav-container {
     padding: 0 var(--space-4);
   width: 100vw;
-
+  margin: 0 0;
+  
   }
 }
 .navbar .nav-brand {
@@ -1426,7 +1427,7 @@ p {
 .navbar .nav-container {
     padding: 0 var(--space-4);
   width: 100vw;
-
+  margin: 0 0;
   }
 }
 
