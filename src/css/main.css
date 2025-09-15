@@ -1434,7 +1434,7 @@ p {
     width: 100%;
     right: -100%;
   }
-}
+
 .navbar .nav-close {
   position: absolute;
   top: var(--space-6);
