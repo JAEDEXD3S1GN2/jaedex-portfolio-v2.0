@@ -1369,7 +1369,7 @@ p {
   box-shadow: 0 2px 20px var(--shadow-light);
 }
 .navbar .nav-container {
-  width: 1200px;
+  width: 100vw;
   margin: 0 15px;
   padding: 0 var(--space-6);
   display: flex;
