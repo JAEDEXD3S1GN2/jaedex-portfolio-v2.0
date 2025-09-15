@@ -1380,7 +1380,7 @@ p {
 @media (max-width: 767px) {
   .navbar .nav-container {
     padding: 0 var(--space-4);
-  width: 300px;
+  width: 100vw;
 
   }
 }
