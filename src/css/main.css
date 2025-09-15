@@ -1432,7 +1432,7 @@ p {
 }
 
   .navbar .nav-menu {
-    width: 100%;
+    width: max-content;
     right: -100%;
   }
 
