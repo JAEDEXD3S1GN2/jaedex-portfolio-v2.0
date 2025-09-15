@@ -1451,7 +1451,7 @@ p {
 }
 @media (max-width: 991px) {
   .navbar .nav-close {
-    display: flex;
+    display: none;
   }
 }
 .navbar .nav-close:hover {
