@@ -1370,7 +1370,7 @@ p {
 }
 .navbar .nav-container {
   width: 100vw;
-  margin: 0 15px;
+  margin: 0 0;
   padding: 0 var(--space-6);
   display: flex;
   align-items: center;
